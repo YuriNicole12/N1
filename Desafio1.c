@@ -40,13 +40,13 @@ int hex_para_decimal(char c1, char c2) {
 }
 
 int main() {
-    int num_mensagens, b;
+    int num_mensagens, b, i, j;
     char mensagem[101];
 
     printf("Digite o número de mensagens interceptadas: ");
     scanf("%d", &num_mensagens);
 
-    for (int i = 0; i < num_mensagens; i++) {
+    for ( i = 0; i < num_mensagens; i++) {
         printf("Digite o valor de b para a mensagem %d: ", i + 1);
         scanf("%d", &b);
 
@@ -56,7 +56,7 @@ int main() {
         int len = strlen(mensagem);
         int posicao = 1;
 
-        for (int j = 0; j < len; j += 2) {
+        for ( j = 0; j < len; j += 2) {
             if (mensagem[j] == '0' && mensagem[j + 1] == '0') {
                 break;
             }
